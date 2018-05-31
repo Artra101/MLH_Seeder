@@ -3,7 +3,7 @@
  "language": "python",
  "author": "Artra101",
  "description": "MLH for seeding",
- "version": "3.0.1",
+ "version": "3.0.2",
  "min_os_version_major": 6,
  "url": "https://raw.githubusercontent.com/Artra101/MLH_Seeder/master/MLH/manifest.json",
  "zip": "https://github.com/Artra101/MLH_Seeder/archive/master.zip",
