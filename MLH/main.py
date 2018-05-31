@@ -25,8 +25,8 @@ class MLH(Farmware):
         self.args['pointname']     = os.environ.get(prefix + "_pointname", 'Beets')
         self.args['default_z']     = int(os.environ.get(prefix + "_default_z", -300))
         self.args['action']        = os.environ.get(prefix + "_action", 'real')
-        self.args['filter_meta']   = os.environ.get(prefix + "_filter_meta", "None")
-        self.args['save_meta']     = os.environ.get(prefix + "_save_meta", "[('del','last_watering')]")
+        self.args['filter_meta']   = [('plant_stage','planned')]
+        self.args['save_meta']     = [('plant_stage','planted')]
         self.args['s']['init']     = os.environ.get(prefix + '_init', 'None')
         self.args['s']['before']   = os.environ.get(prefix + '_before', 'None')
         self.args['s']['after']    = os.environ.get(prefix + '_after', 'None')
