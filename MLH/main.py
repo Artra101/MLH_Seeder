@@ -23,14 +23,14 @@ class MLH(Farmware):
         self.args = {}
         self.args['s']={}
         self.args['pointname']     = os.environ.get(prefix + "_pointname", 'Beets')
-        self.args['default_z']     = int(os.environ.get(prefix + "_default_z", -300))
+        self.args['default_z']     = "0"
         self.args['action']        = os.environ.get(prefix + "_action", 'real')
         self.args['filter_meta']   = "[('plant_stage','planned')]"
         self.args['save_meta']     = "[('plant_stage','planted')]"
-        self.args['s']['init']     = os.environ.get(prefix + '_init', 'None')
+        self.args['s']['init']     = "MLH Mount Seeder"
         self.args['s']['before']   = os.environ.get(prefix + '_before', 'None')
-        self.args['s']['after']    = os.environ.get(prefix + '_after', 'None')
-        self.args['s']['end']      = os.environ.get(prefix + '_end', 'None')
+        self.args['s']['after']    = "MLH Plant"
+        self.args['s']['end']      = "MLH Dismount Seeder"
 
         try:
             self.args['pointname']=self.args['pointname'].lower().split(',')
